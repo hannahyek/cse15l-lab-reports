@@ -12,7 +12,6 @@ After finding your course-specific account [here](https://sdacs.ucsd.edu/~icc/in
 - Input the ssh command below in the terminal
 `$ ssh cs15lwi23zz@ieng6.ucsd.edu`
 - Here, zz should be replaced by the letters in your course-specific account
-- You should see something like this:
 
 ## Step 3: yes/no
 - When connecting to a new server for the first time, it is expected to receive the message in the last step
