@@ -4,16 +4,16 @@
 
 The code for my StringServer:
 ---
-![Image](Screenshot (80).png)
+![Image](Screenshot_(80).png)
 
 Using /add-message:
 ---
-![Image](Screenshot (78).png)
+![Image](Screenshot_(78).png)
 - Here, the handleRequest method is called.
 - The relevant arguments to this method is the path of the url containing `/add-message`.
 - The value of the `string` variable changes from an empty string `""` to `"Hello!"`. I was able to isolate this message by creating an array and separating the value after the `=` denoted in the url.
 
-![Image](Screenshot (79).png)
+![Image](Screenshot_(79).png)
 - Again, the handleRequest method is called. This time, the input for the url is different from the above example (since we have a different url).
 - The relevant arguments to this method is the path of the url containing `/add-message`.
 - The value of the `string` variable changes to also contain `"\n" + "My name is Hannah."`. I was able to add this value to `string` by saving the previous contents in the variable and adding new values to it.
