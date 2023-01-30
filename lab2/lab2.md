@@ -20,20 +20,24 @@ Using /add-message:
 
 ## Part 2: Bugs from Lab 3
 **Failure-inducing input for the buggy program (JUnit test):**
-`@Test 
+```
+@Test 
 	public void testReverseInPlace2() {
     int[] input2 = {0, 1, 2, 3, 4};
     ArrayExamples.reverseInPlace(input2);
     assertArrayEquals(new int[]{4, 3, 2, 1, 0}, input2);
-	}`
+	}
+```
 
 **Input that doesn't induce a failure (JUnit test):**
-`@Test 
+```
+@Test 
 	public void testReverseInPlace() {
     int[] input1 = { 3 };
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(new int[]{ 3 }, input1);
-	}`
+	}
+```
 
 **The Symptom (output of running the tests):**
 - Running failure-inducing input:
@@ -44,14 +48,17 @@ Using /add-message:
 
 **The bug:**
 - Before code change:
-`static void reverseInPlace(int[] arr) {
+```
+static void reverseInPlace(int[] arr) {
     for(int i = 0; i < arr.length; i += 1) {
       arr[i] = arr[arr.length - i - 1];
     }
-  }`
+  }
+```
   
 - After code change:
-`static void reverseInPlace(int[] arr) {
+```
+static void reverseInPlace(int[] arr) {
     //creating a deep copy of arr
     int[] arrCopy = new int[arr.length];
     for(int i = 0; i < arr.length; i++) {
@@ -61,7 +68,8 @@ Using /add-message:
     for(int i = 0; i < arr.length; i += 1) {
       arr[i] = arrCopy[arr.length - i - 1];
     }
-  }`
+  }
+```
 > Originally, the code was solely working with 1 array. This resulted in the second half of the array not being able to change to the respective values in the original first half of the array (as the values had already been modified to contain the values in the second half). My code change was able to fix this issue by creating a deep copy of the array that can be referenced in the for loop when re-assigning values to the original array.
 
 ## Part 3: What I've Learned
