@@ -2,7 +2,7 @@
 After finding your course-specific account [here](https://sdacs.ucsd.edu/~icc/index.php), you will want to log into it on ieng6.
 
 ## Step 1: Open a terminal in VSCode
-- Install and open VS Code. It should look something like this:
+- [Install](https://code.visualstudio.com/download) and open VS Code. It should look something like this:
 ![Image](cse15l_labrep1img.png)
 - Click the Terminal tab located at the very top
 - Click New Terminal
@@ -28,6 +28,7 @@ After finding your course-specific account [here](https://sdacs.ucsd.edu/~icc/in
 - Try some commands
 - Here is how the `cat` command worked in my instance:
 ![Image](cse15l_labrep2.5img.png)
+> 'cat' is short for concatenate! In this example, I am displaying the contents of the text file 'hello.txt' in the terminal. I am able to locate the file 'hello.txt' by its particular file path on the ieng6 server: '/home/linux/ieng6/cse15lwi23/public/hello.txt'.
 
 ## Congratulations! You've successfully logged into a course-specific account on ieng6.
 ![Image](https://i.pinimg.com/originals/43/7c/12/437c12c5d7fb1c5d920df12308557561.jpg)
