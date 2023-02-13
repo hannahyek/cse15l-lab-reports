@@ -10,6 +10,7 @@ $ find ./written_2 -name HandRHawaii.txt
 ./written_2/travel_guides/berlitz1/HandRHawaii.txt
 ```
 > Here, the `find` command is searching the directory `written_2` and the `-name` option poses the condition that the name of the file must be `HandRHawaii.txt`. This is useful as it lets us know the path of specific files.
+
 ```
 $ find ./written_2 -name ch1.txt
 ./written_2/non-fiction/OUP/Abernathy/ch1.txt
@@ -69,6 +70,7 @@ $ find ./written_2 -name "ch*.txt"
 ./written_2/non-fiction/OUP/Rybczynski/ch3.txt
 ```
 > In this case, there is a search for files that are named `ch*.txt` where the `*` can be replaced by any assortment of characters. This is useful for finding files with patterned names.
+
 ```
 $ find ./written_2 -name "History*.txt"
 ./written_2/travel_guides/berlitz1/HistoryDublin.txt
@@ -102,6 +104,7 @@ $ find ./written_2 -name "History*.txt"
 $ find ./written_2 -empty
 ```
 > If we wanted to check a directory for empty files for the purpose of removing them, the `-empty` option will grant us a list of file paths to empty files/directories. Here, we can see that `written_2` has 0 empty files/subdirectories.
+
 ```
 $ find ./written_2/travel_guides -empty
 ```
@@ -114,6 +117,7 @@ Centuries before the arrival of Columbus, a peaceful Amerindian people who calle
 The Spaniards never bothered to settle in the Bahamas, but the number of shipwrecks attest that their galleons frequently passed through the archipelago en route to and from the Caribbean, Florida, Bermuda, and their home ports. On Eleuthera the explorers dug a fresh-water well — at a spot now known as “Spanish Wells” — which was used to replenish the supplies of water on their ships before they began the long journey back to Europe with their cargoes of South American gold. As for the Lucayans, within 25 years all of them, perhaps some 30,000 people, were removed from the Bahamas to work — and die — in Spanish gold mines and on farms and pearl fisheries on Hispaniola (Haiti), Cuba, and elsewhere in the Caribbean.
 ```
 > There are multiple options being used in this command. From left to right,  `-type f` specifies the input type is a file, `-name "*.txt"` searches for files ending in .txt, and `-exec grep 'Lucayans'` is used to execute the grep command to print lines which have the input string in them. This is useful for finding specific information on certain topics.
+
 ```
 $ find ./written_2 -type f -name "*.txt" -exec grep 'Oahu'  {} \;
         Oahu (Including Honolulu)
