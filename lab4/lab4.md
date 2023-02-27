@@ -1,5 +1,6 @@
 # Lab Report 4: Challenge Tasks
 
+---
 ## Log into ieng6
 ![Image](Screenshot(85).png)
 Keys pressed:
@@ -9,6 +10,7 @@ ssh cs15lwi23awv@ieng6.ucsd.edu
 ```
 > Here, I am logging into the ieng6 server using the ssh command and my unique ID.
 
+---
 ## Clone your fork of the repository from your Github account
 ![Image](Screenshot(86).png)
 Keys pressed:
